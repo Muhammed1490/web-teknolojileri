@@ -16,7 +16,9 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <button type="button" class="btn btn-outline-success">Giriş yap</button>
+        <form action="girisyap.html">
+          <button type="submit" class="btn btn-outline-success">Giriş yap</button>
+        </form>
         <button
           class="navbar-toggler"
           type="button"
@@ -76,59 +78,85 @@
 
 
 <div class="container my-5">
-
-    <form class="row g-3" action="iletisim.php" method="POST">
+<script src="fonksiyonlar.js"></script>
+    <form class="row g-3" action="formbilgileri.php" method="POST" name="form" onsubmit="return form_kontrol()">
+      
+        <div class="col-md-6">
+          <label  class="form-label">Ad</label>
+          <input type="text" class="form-control" placeholder="Ad" aria-label="First name" name="Ad">
+        </div>
+        <div class="col-md-6">
+          <label  class="form-label">Soyad</label>
+          <input type="text" class="form-control" placeholder="Soyad" aria-label="Last name" name="Soyad">
+        </div>
+      
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <input type="text" class="form-control" id="inputEmail4" name="Mail">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Şifre</label>
-          <input type="password" class="form-control" id="inputPassword4">
+          <input type="password" class="form-control" id="inputPassword4" name="Şifre">
         </div>
         <div class="col-12">
-          <label for="inputAddress" class="form-label">Adres</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Sakarya Üniversitesi">
+          <label for="exampleFormControlTextarea1" class="form-label">Mesajınız</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mesajınız..." name="Mesaj"></textarea>
         </div>
         
         
-        <div class="col-md-4 ">
-          <label for="inputState" class="form-label">Şehir</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option value="Usak">Uşak</option>
-            <option value="Istanbul">İstanbul</option>
-            <option value="Sakarya">Sakarya</option>
-            <option value="Bursa">Bursa</option>
-            <option value="Ankara">Ankara</option>
+        <div class="col-md-6 ">
+          <label for="inputState" class="form-label">Üniversite</label>
+          <select id="inputState" class="form-select" name="Universite">
+            <option value="Sakarya Universitesi" name="Universite" selected>Sakarya Üniversite</option>     
+            <option value="Istanbul Universitesi" name="Universite">İstanbul Üniversite</option>
+            <option value="Usak Universitesi" name="Universite">Uşak Üniversite</option>
+            <option value="Bursa Uludag Universite" name="Universite">Bursa Uludağ Üniversite</option>
+            <option value="Ankara Universitesi" name="Universite">Ankara Üniversite</option>
           </select>
         </div>
-        <div class="col-12">
-            <p>Cinsiyet</p> 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Erkek
-                </label>
-              </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Kadın
-                </label>
-              </div>
+        
+
+        <div class="col-12">
+          <p>Cinsiyet</p> 
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="Cinsiyet" id="flexRadioDefault1" value="Erkek">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Erkek
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="Cinsiyet" id="flexCheckChecked" checked value="Kadın">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Kadın
+              </label>
+            </div>
         </div>
         <div class="col-12">
+          <p>Programlama Dilleri</p>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="Programlama[]" value="C++">
+            <label class="form-check-label" for="gridCheck"> C++ </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="Programlama[]" value="C#">
             <label class="form-check-label" for="gridCheck">
-              Ben Robot DEĞİLİM.
+             C#
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="Programlama[]" value="HTML-CSS-JavaScript" >
+            <label class="form-check-label" for="gridCheck">
+              HTML-CSS-JavaScript
             </label>
           </div>
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Kaydet</button>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary">Gönder</button>
+        </div>
+        <div class="col-md-11">
+          <button type="reset" class="btn btn-primary">Temizle</button>
         </div>
       </form>
 
