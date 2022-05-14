@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +13,8 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <form action="girisyap.html">
           <button type="submit" class="btn btn-outline-success">Giriş yap</button>
@@ -73,6 +73,47 @@
       </div>
     </nav>
 
+    
+     
+
+
+
+
+    <div class="container my-5">
+      <script src="fonksiyonlar.js"></script>
+      <form
+        action="iletisim.php"
+        method="POST"
+        name="login_kontrol"
+        onsubmit="return login_kontrol()"
+      >
+        <div class="col-md-4">
+          <label for="inputEmail4" class="form-label">Kullanıcı Adı</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEmail4"
+            name="Mail"
+            placeholder="g211210008@sakarya.edu.tr"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Şifre</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            name="Şifre"
+            placeholder="g211210008"
+          />
+        </div>
+        <div class="col-md-4 my-3">
+          <form action="iletisim.php">
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+          </form>
+        </div>
+      </form>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
