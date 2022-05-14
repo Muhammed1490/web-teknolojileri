@@ -16,13 +16,11 @@
     <?php echo "Mesajınız: ". $_POST["Mesaj"]."<br>"; ?>
     <?php echo "Üniversite: ".$_POST["Universite"]."<br>"; ?>
     <?php echo "Cinsiyet: ".$_POST["Cinsiyet"]."<br>"; ?>
-    
 
     <?php
         echo "Programlama Dilleri:";
         foreach($_POST['Programlama'] as $selected){
         echo "<br>". $selected; } ?>
         
-
 </body>
 </html>
