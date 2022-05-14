@@ -16,7 +16,7 @@ body {
       rgba(69, 78, 84, 0.2),
       rgba(134, 39, 42, 0.2)
     ),
-    url("img/anasayfa.jpg");
+    url("../img/anasayfa.jpg");
   background-position: bottom left;
   background-size: cover;
   background-attachment: fixed;
@@ -25,7 +25,6 @@ body {
   position: relative;
 }
 #resim .content {
-  /* position: absolute; */
   top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -37,4 +36,21 @@ body {
 }
 .baslık {
   font-size: 1.5rem;
+}
+
+.miniresim{
+  
+  width: 25%;
+}
+
+#about .container .container
+{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+#about .col-xs-12 .progress-bar
+{
+  width:80%;
 }

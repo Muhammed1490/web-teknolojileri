@@ -1,0 +1,12 @@
+body{
+    margin:0;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .container{
+    margin: 25px;
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+  }
+  
